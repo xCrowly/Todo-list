@@ -3,10 +3,12 @@
     border: 0;
     margin: 0;
     box-sizing: border-box;
+    min-height: auto;
 }
 
 body {
     background-color: #F1F5F9;
+    min-height: max-content;
 }
 
 .header-sec {
@@ -42,9 +44,9 @@ body {
 #form-sec button {
     border-radius: 25px;
     background: rgb(0, 128, 128);
-    font-weight: 300;
+    font-weight: 600;
     color: aliceblue;
-    padding: 3px 6px;
+    padding: 5px 10px;
     border: 1px solid rgb(0, 75, 75);
 }
 
@@ -55,14 +57,33 @@ body {
     animation-iteration-count: infinite;
 }
 
-#footer-sec {
-    height: 120px;
-    /* Width should be 100% and the position = fixed to make the footer stick at the bottom */
-    width: 100%;
-    background: rgb(0, 128, 128);
-    position:fixed;
-    bottom:0;
-    float:inline-end;
+#todo-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+    width: auto;
+    height: auto;
+    margin: 0px 15px;
+}
+
+#todo-container li {
+    padding: 5px 15px;
+    align-content:center;
+    margin: 15px 20px;
+    padding-right: 25px;
+    width:fit-content;
+    border-radius: 25px;
+    background: rgb(255, 255, 255);
+    color: rgb(26, 86, 90);
+    font-weight: 600px;
+    font-size: 20px;
+    border: 1px solid rgb(186, 186, 186);
+    transition: all .5s;
+}
+
+#todo-container li:hover {
+    background: rgb(56, 148, 155);
+    cursor: pointer;
 }
 
 @keyframes btn-scale {

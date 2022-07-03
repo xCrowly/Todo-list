@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arima:wght@300;600&display=swap" rel="stylesheet">
-    <script src="./javaScript/app.js"></script>
 </head>
 
 <body>
@@ -18,14 +17,18 @@
         </p>
     </header>
     <div id="form-sec">
-        <form>
-            <input type="text" placeholder=" Enter item" >
-            <button>Add item</button>
+        <form name="myForm" onsubmit="return getFormText()" method="post">
+            <input id="input-text" type="text" placeholder=" Enter item" name="Iname">
+            <button id="btn-inp" type="button" value="Submit">Add item</button>
+
         </form>
     </div>
-    <footer id="footer-sec">
-
-    </footer>
+    <div id="todo-container">
+        <li id="todo-item">
+            o
+        </li>
+    </div>
+    <script src="./javaScript/app.js"></script>
 </body>
 
 </html>
