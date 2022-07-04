@@ -1,7 +1,7 @@
 var btnListener = document.getElementById("btn-inp");
 var input = document.getElementById("input-text");
 var todoItemParent = document.getElementById("todo-container");
-var todoItemChild = document.getElementById("todo-item");
+var idCount = 0;
 
 function getFormText() {
     var input2 = document.forms["myForm"]["Iname"].value;
@@ -9,23 +9,25 @@ function getFormText() {
 }
 
 function addItem() {
-    var li = document.createElement("li");
+    var li1 = document.createElement("li");
+    li1.setAttribute('id', idCount)
+    li1.setAttribute('ondblclick', "removeItem(this)")
+    idCount++;
     var getInputText = document.createTextNode(getFormText());
-    li.appendChild(getInputText);
-    todoItemParent.insertBefore(li, todoItemParent.firstChild);
+    li1.appendChild(getInputText);
+    todoItemParent.insertBefore(li1, todoItemParent.firstChild);
 }
-function removeItem() {
-    todoItemChild.remove();
+
+function removeItem(tempId) {
+    console.log(tempId.id);
+    tempId.remove();
 }
 
 btnListener.addEventListener('click', function () {
     if (getFormText() != "") {
         addItem();
-    }
+    } else { alert("Please type something."); }
 });
-
-todoItemChild.addEventListener('dblclick', () => removeItem());
-// todoItemParent["li"].addEventListener('dblclick', () => removeItem());
 
 
 

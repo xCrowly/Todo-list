@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" >
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale= 1.0">
     <link rel="stylesheet" type="text/css" href="./css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,17 +16,17 @@
             Todo list
         </p>
     </header>
+    <P style="font-weight: 600; color: rgb(26, 86, 90); ">NOTE: Double click any item to remove.</P>
     <div id="form-sec">
         <form name="myForm" onsubmit="return getFormText()" method="post">
             <input id="input-text" type="text" placeholder=" Enter item" name="Iname">
-            <button id="btn-inp" type="button" value="Submit">Add item</button>
-
+            <button id="btn-inp" type="button" value="Submit" >Add item</button>
         </form>
     </div>
-    <div id="todo-container">
-        <li id="todo-item">
+    <div id="todo-container" >
+        <!-- <li id="todo-item" >
             o
-        </li>
+        </li> -->
     </div>
     <script src="./javaScript/app.js"></script>
 </body>
