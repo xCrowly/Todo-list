@@ -12,6 +12,7 @@ function addItem() {
     var li1 = document.createElement("li");
     li1.setAttribute('id', idCount)
     li1.setAttribute('ondblclick', "removeItem(this)")
+    li1.setAttribute('onclick', "checkItem(this)")
     idCount++;
     var getInputText = document.createTextNode(getFormText());
     li1.appendChild(getInputText);
@@ -21,6 +22,10 @@ function addItem() {
 function removeItem(tempId) {
     console.log(tempId.id);
     tempId.remove();
+}
+
+function checkItem(tempId) {
+    tempId.setAttribute('style', 'text-decoration: line-through;color: red;');
 }
 
 btnListener.addEventListener('click', function () {

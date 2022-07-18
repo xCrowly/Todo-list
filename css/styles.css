@@ -8,7 +8,7 @@
 
 body {
     background-color: #F1F5F9;
-    
+
 }
 
 .header-sec {
@@ -79,7 +79,6 @@ body {
     font-size: 20px;
     border: 1px solid rgb(186, 186, 186);
     transition: all .5s;
-    
 }
 
 #todo-container li:hover {
