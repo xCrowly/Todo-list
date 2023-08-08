@@ -1,102 +1,90 @@
 * {
-    font-family: Arima, sans-serif;
-    border: 0;
-    margin: 0;
-    box-sizing: border-box;
-    min-height: auto;
+  font-family: Arima, sans-serif;
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+  min-height: auto;
 }
 
 body {
-    background-color: #F1F5F9;
-
+  background-color: #d8f9e5;
 }
 
 .header-sec {
-    width: 100%;
-    height: 60px;
-    background: rgb(0, 128, 128);
-    font-size: 40px;
-    font-weight: 700;
+  width: 100%;
+  height: 60px;
+  margin-bottom: 10px;
+  background: rgb(0, 128, 128);
+  font-size: 40px;
+  font-weight: 700;
 }
 
 #form-sec {
-    margin-top: 30px;
-    text-align: center;
-    width: 300px;
-    padding: 7px;
-    border: 2px solid rgb(186, 186, 186);
-    border-radius: 25px;
-    width: max-content;
-    margin-left: calc(100% / 2 - 150px);
+  margin: 15px 0;
+  text-align: center;
+  width: 300px;
+  background: rgb(255, 255, 255);
+  padding: 7px;
+  border: 1px solid rgb(15, 15, 15);
+  border-radius: 2px;
+  width: max-content;
+  margin-left: calc(100% / 2 - 150px);
 }
 
 #form-sec input {
-    border-radius: 25px;
-    width: 200px;
-    padding: 5px 10px;
-    border: 1px solid rgb(215, 215, 215);
+  border-radius: 25px;
+  width: 200px;
+  padding: 5px 10px;
+  border: 1px solid rgb(215, 215, 215);
 }
 
 #form-sec input:hover {
-    background: aliceblue;
+  background: aliceblue;
 }
 
 #form-sec button {
-    border-radius: 25px;
-    background: rgb(0, 128, 128);
-    font-weight: 600;
-    color: aliceblue;
-    padding: 5px 10px;
-    border: 1px solid rgb(0, 75, 75);
+  border-radius: 25px;
+  background: rgb(0, 128, 128);
+  font-weight: 600;
+  color: aliceblue;
+  padding: 5px 10px;
+  border: 1px solid rgb(0, 75, 75);
 }
 
 #form-sec button:hover {
-    background: rgb(0, 79, 79);
-    animation: btn-scale 1s;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
+  background: rgb(0, 99, 99);
+  transform: scale(1.1);
+  cursor: pointer;
+  box-shadow: 0px 5px 25px rgb(126, 126, 126);
 }
 
 #todo-container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-flow: column;
-    width: auto;
-    height: auto;
-    margin: 0px 15px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: column;
+  width: auto;
+  height: auto;
+  margin: 0px 15px;
 }
 
 #todo-container li {
-    padding: 5px 15px;
-    align-content: center;
-    margin: 15px 20px;
-    padding-right: 25px;
-    width: fit-content;
-    border-radius: 25px;
-    background: rgb(255, 255, 255);
-    color: rgb(26, 86, 90);
-    font-weight: 600px;
-    font-size: 20px;
-    border: 1px solid rgb(186, 186, 186);
-    transition: all .5s;
+  padding: 5px 10px;
+  align-content: center;
+  margin: 5px 20px;
+  width: fit-content;
+  border-radius: 2px;
+  user-select: none;
+  list-style: none;
+  background: rgb(255, 255, 255);
+  color: rgb(26, 86, 90);
+  font-weight: 600px;
+  font-size: 20px;
+  border: 1px solid rgb(17, 17, 17);
+  transition: all 0.3s;
 }
 
 #todo-container li:hover {
-    background: rgb(75, 186, 184);
-    cursor: pointer;
-    color: aliceblue;
-}
-
-@keyframes btn-scale {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.15);
-    }
-
-    100% {
-        transform: scale(1);
-    }
+  background: rgb(75, 186, 184);
+  cursor: pointer;
+  color: white;
 }

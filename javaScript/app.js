@@ -1,45 +1,49 @@
 var btnListener = document.getElementById("btn-inp");
 var input = document.getElementById("input-text");
 var todoItemParent = document.getElementById("todo-container");
-var idCount = 0;
+var idCount;
 
+// get the input field text
 function getFormText() {
-    var input2 = document.forms["myForm"]["Iname"].value;
-    return input2;
+  return document.forms["myForm"]["Iname"].value;
 }
 
+// Append Items to the DOM element
 function addItem() {
-    var li1 = document.createElement("li");
-    li1.setAttribute('id', idCount)
-    li1.setAttribute('ondblclick', "removeItem(this)")
-    li1.setAttribute('onclick', "checkItem(this)")
-    idCount++;
-    var getInputText = document.createTextNode(getFormText());
-    li1.appendChild(getInputText);
-    todoItemParent.insertBefore(li1, todoItemParent.firstChild);
+  var li1 = document.createElement("li");
+  li1.setAttribute("id", idCount);
+  li1.setAttribute("ondblclick", "removeItem(this)");
+  li1.setAttribute("onclick", "checkItem(this)");
+  idCount++;
+  var getInputText = document.createTextNode(getFormText());
+  li1.appendChild(getInputText);
+  todoItemParent.insertBefore(li1, todoItemParent.firstChild);
 }
 
+// remove Items to the DOM element
 function removeItem(tempId) {
-    console.log(tempId.id);
-    tempId.remove();
+  tempId.remove();
 }
 
+// Add line through for finished toDO item
 function checkItem(tempId) {
-    tempId.setAttribute('style', 'text-decoration: line-through;color: red;');
+  if (
+    tempId.getAttribute("style", "text-decoration: line-through;color: red;")
+  ) {
+    tempId.removeAttribute(
+      "style",
+      "text-decoration: line-through;color: red;"
+    );
+  } else {
+    tempId.setAttribute("style", "text-decoration: line-through;color: red;");
+  }
 }
 
-btnListener.addEventListener('click', function () {
-    if (getFormText() != "") {
-        addItem();
-    } else { alert("Please type something."); }
+// Event listener for input button
+btnListener.addEventListener("click", function () {
+  if (getFormText() != "") {
+    addItem();
+  } else {
+    alert("Please type something.");
+  }
 });
-
-
-
-
-
-
-
-
-
-
